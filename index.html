@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jingade CTC-DECODER</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body ng-app="myApp" ng-controller="myCont">
+    <div  class="divtag" >
+        <div id="hedding"><h1>Welcome To Jingade CTC-Decoder </h1></div>
+        <div>
+           <div>Cost To Company(CTC) : <input ng-model="CTC" type="number" ng-change="ctcch()" required></div> <br>
+           <div>Bonus Included In CTC : <input type="checkbox" name="bon" ng-model="bon" id=""> <input ng-show="bon" ng-model="bonus"type="number"></div>
+           <div><h1 class="h1">Monthly Deductions*</h1></div>
+           <div>PF(Employee) : <input ng-model="pfemp" type="number" > </div><br>
+           <div>PF(Employer) : <input ng-model="pfempr" type="number" > </div> <br>
+           <div>Profisional Tax : <input ng-model="pftax" type="number" > </div><br>
+           <div>Insurence : <input ng-model="insu" type="number"></div><br>
+           <div>Additional Deduction1 : <input type="checkbox" ng-model="additional1" name="additional1" id=""><input ng-show="additional1" ng-model="add1" type="text"><input ng-show="additional1" type="number" ng-model="additionalValue1"></div><br>
+           <div>Additional Deduction2 : <input type="checkbox" ng-model="additional2" name="additional2" id=""><input ng-show="additional2" ng-model="add2" type="text"><input ng-show="additional2" type="number" ng-model="additionalValue2"></div><br>
+           <div><button id="submit" type="submit" ng-click="submit()">CALCULATE</button>                        <button id="reset" ng-click="reset" type="reset">RESET</button></div>
+        </div>
+        <div><h1 class="h1" ng-show="ret">TakeHome</h1></div>
+        <span ng-show="ret" id="h1tag">{{CTC}}</span>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
